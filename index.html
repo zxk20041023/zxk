@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="new_file.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header"> 
+            <div class="header_box">
+                <div class="left">
+                    <img src="../../js/屏幕截图 2024-06-18 222953.png" alt="">
+                </div>
+                <div class="right">
+                    <div class="top">
+                        <span>有问题找我们：123456789</span>
+                    </div>
+                    <div class="bot">           
+                        <a href="" class="on">首页</a>
+                        <a href="xiangqingye.html">重要新闻</a>
+                        <a href="geming.html">革命地标</a>
+                        <a href="">红色影响</a>
+                        <a href="">红色记忆</a>
+                        <a href="">红色文化</a>
+                        <a href="">时政要闻</a>
+                        <a href="denglu.html">登录/注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+			<div class="banner">
+					    <div class="banner_pic" id="banner_pic">
+					        <div class="current"><img src="屏幕截图 2024-06-20 103657.png" width="1000" height="850" /></div>
+					        <div class="pic"><img src="屏幕截图 2024-06-19 205221.png" width=100px height=100px /></div>
+					        <div class="pic"><img src="屏幕截图 2024-06-20 103544.png" width="1000" height="850" /></div>
+					        <div class="pic"><img src="屏幕截图 2024-06-20 113014.png"" width="1000" height="850" /></div>
+					    </div>
+					    <ol id="button">
+					        <li class="current"></li>
+					        <li class="but"></li>
+					        <li class="but"></li>
+					        <li class="but"></li>
+					    </ol>   
+					</div>
+			<script>
+						var current_index=0;
+						var timer=window.setInterval(autoChange,3000);
+						var button_li=document.getElementById("button").getElementsByTagName("li");
+						var pic_div=document.getElementById("banner_pic").getElementsByTagName("div");
+						for(var i=0;i<button_li.length;i++){
+							button_li[i].onmouseover=function(){
+								if(timer){
+									clearInterval(timer);
+								}
+								for(var j=0;j<pic_div.length;j++){
+									if(button_li[j]==this){
+										current_index=j; 
+										button_li[j].className="current";
+										pic_div[j].className="current";
+									}else{
+										pic_div[j].className="pic";
+										button_li[j].className="but";
+									}
+								}
+							}
+							button_li[i].onmouseout=function(){
+								timer=setInterval(autoChange,3000);			
+							}
+						}
+						function autoChange(){
+							++current_index;
+							if (current_index==button_li.length) {
+								current_index=0;
+							}
+							for(var i=0;i<button_li.length;i++){
+								if(i==current_index){
+									button_li[i].className="current";
+									pic_div[i].className="current";
+								}else{
+									button_li[i].className="but";
+									pic_div[i].className="pic";
+								}
+							}
+						}
+					</script>
+			
+		
+        <div class="news">
+            <div class="new_box">
+                <div class="title">
+                    <p>时政要闻</p>
+                    <p>红色建党</p>
+                    <p>通知公告</p>
+                </div>
+                <div class="new_list">
+                    <div class="news_item">
+                        <p>
+                            <span class="tit">习近平在中阿合作论坛第十届部长级会议开幕式上的主旨讲话</span>
+                        </p>
+                        <p>
+                            <span class="tit">李强同新西兰总理拉克森会谈</span>
+                        </p>
+                        <p>
+                            <span class="tit">推动世界走向和平、安全、繁荣、进步的美好未来</span>
+                        <p>
+                            <span class="tit">大力培养创新人才 加快建设科技强国</span>
+                        </p>
+                        <p>
+                            <span class="tit">李强致电祝贺莫迪连任印度总理</span>
+                        </p>
+                        <p>
+                            <span class="tit">保护传承风正劲 文化遗产绽光华</span>
+                        </p>
+                        <p>
+                            <span class="tit">习近平复信美国肯恩大学校长雷波列特</span>
+                        </p>
+                        <p>
+                            <span class="tit">习近平向冰岛当选总统托马斯多蒂尔致贺电</span>
+                        </p>
+                    </div>
+                    <div class="news_item">
+                        <div class="new_middle">
+                            <div class="tips">
+                                111
+                            </div>
+                            <div class="news_img">
+                                <img src="屏幕截图 2024-06-19 205029.png" alt="">
+                            </div>
+                            <div class="msg">
+                                <p class="tit">
+                                    源头施治 筑牢防线
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="new_middle">
+                            <div class="tips">
+                                111
+                            </div>
+                            
+                            <div class="news_img">
+                                <img src="屏幕截图 2024-06-20 103359.png" alt="">
+                            </div>
+							
+                            <div class="msg">
+                                <p class="tit">
+                                    让纪律成为党员的“自我命令”
+                                </p>
+                               
+                            </div>
+                        </div>
+                        <div class="new_middle">
+                            <div class="tips">
+                                111
+                            </div>
+                            <div class="news_img">
+                                <img src="屏幕截图 2024-06-20 103544.png" alt="">
+                            </div>
+                            <div class="msg">
+                                <p class="tit">
+                                    增强纪律学习的自觉性和坚定性
+                                </p>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news_item">
+                        <div class="top_img">
+                            <img src="屏幕截图 2024-06-20 103223.png" alt="">
+                        </div>
+                        <p>中办 国办印发《关于建立领导干部应知应会党内法规和国家法律清单制度的意见》</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="yw">
+            <div class="yw_box">
+                <div class="title">
+                    思想理论
+                </div>
+                <div class="list">
+                    <div class="item">
+                        <div class="top_img">
+                           <video src="抖音2024625-225267.mp4" controls class="item"></video>
+                        </div>
+                        <div class="txt">
+                            <span>全文来了！习近平在中阿合作论坛第十届部长级会议开幕式上的主旨讲话</span>
+                            
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="top_img">
+							<a href="https://focus.scol.com.cn/zgsz/202405/82533406.html">
+                            <img src="屏幕截图 2024-06-20 103633.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+							
+                            <span>深入学习贯彻习近平总书记关于加强党的纪律教育的重要论述</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="top_img">
+                            <img src="屏幕截图 2024-06-20 113156.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <span>首个全国学生心理健康宣传教育月在京启动</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="top_img">
+                            <img src="屏幕截图 2024-06-19 205029.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <span>习语｜抓创新不问“出身”</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hf">
+                    <div class="hf_item">
+                        <div class="img">
+                            <img src="屏幕截图 2024-06-20 103657.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="txt1">红色揭秘</p>
+                            <p class="txt2"> </p>
+                        </div>
+                    </div>
+                    <div class="hf_item">
+                        <div class="img">
+                            <img src="屏幕截图 2024-06-20 112932.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="txt1">时代先锋</p>
+                            
+                        </div>
+                    </div>
+                    <div class="hf_item">
+                        <div class="img">
+                            <img src="屏幕截图 2024-06-20 113014.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="txt1">红色建党</p>
+                            
+                        </div>
+                    </div>
+                    <div class="hf_item">
+                        <div class="img">
+                            <img src="屏幕截图 2024-06-20 103850.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <p class="txt1">红色文化</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        
+        <div class="footer">
+            <div class="footer_box">
+                <div class="item">
+					<p>新闻快讯</p>
+                    <p>骄傲！五星红旗在月球背面成功展开</p>
+					<p>被毛泽东誉为 “工兵专家”的王耀南将军</p>
+					<p>李殿仁中将：深切缅怀，永远感恩</p>
+					
+                </div>
+               
+                <div class="item">
+                    <p>行业管理</p>
+					<p>我国以“对口帮扶”推动城市医疗资源下沉</p>
+					<p>国务院国资委召开国资委及委管企业巡视工作推进会议</p>
+					<p>惩治收回扣、打击“号贩子”……多部门出手，纠正医药购销、医疗服务中不正之风</p>
+                </div>
+
+                <div class="item">
+                    <p>党建论坛</p>
+                    <p>让纪律成为党员的“自我命令”</p>
+                    <p>【非凡新时代】人民民主</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="footer_bottom">
+             <div class="footer_bottom_box">
+                 <p>版权所有：张信坤的红色网 20220000594   备案号：122132icp备33333号</p>
+                 <p>服务热线：1231231231</p>
+             </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
